@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >  
+<mapper namespace="com.example.demo.mapper.slave.SlaveUserMapper" >  
+
+<!-- 	<resultMap type="java.util.Map" id="userMap"> -->
+<!-- 		<result column="userName" property="userName"/> -->
+<!-- 		<result column="age" property="age"/> -->
+<!-- 		<result column="sex" property="sex"/> -->
+<!-- 	</resultMap> -->
+
+    <select id="getUserAccountByUserId" parameterType="java.lang.Integer" resultType="java.util.Map">  
+        select * from user_account where userId=#{userId}
+    </select>  
+      
+</mapper>
